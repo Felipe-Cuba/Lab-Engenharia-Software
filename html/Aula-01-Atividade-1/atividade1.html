@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Atividade 1</title>
+  </head>
+
+  <body>
+    <script>
+      let x = prompt("Atribua um valor a variavel: ");
+      if (confirm("Deseja ver o tipo da variavel?")) {
+        if (x.length === 0) {
+          x = undefined;
+        }
+
+        let y = +x;
+
+        if (x === "true") {
+          x = true;
+        }
+
+        if (x === "false") {
+          x = false;
+        }
+
+        if (isNaN(y)) {
+          document.write(`Essa variavel é do tipo ${typeof x}`);
+        } else {
+          document.write(`Essa variavel é do tipo ${typeof y}`);
+        }
+      } else {
+        document.wirte("Obrigado por vistar a pagina");
+      }
+    </script>
+  </body>
+</html>

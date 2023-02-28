@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Atividade 2</title>
+  </head>
+  <body>
+    <script>
+      function verificarPrimo(num) {
+        let div = 0;
+        for (let i = 0; i <= num; i++) {
+          if (num % i === 0) {
+            div++;
+          }
+        }
+
+        if (div === 2) {
+          return true;
+        }
+        return false;
+      }
+
+      let x = prompt("Digite um número: ");
+      let num = +x;
+
+      if (!isNaN(num)) {
+        if (verificarPrimo(parseInt(num))) {
+          alert("O número digitado é primo");
+        } else {
+          alert("O número digitado não é primo");
+        }
+      } else {
+        alert("Esse não é um valor válido!");
+      }
+
+      document.write('Obrigado por visitar a página');
+    </script>
+  </body>
+</html>

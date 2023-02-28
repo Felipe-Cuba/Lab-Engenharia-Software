@@ -1,92 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://kit.fontawesome.com/4ccb67a440.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
+
   <body>
-    <script type="text/javascript">
-      function verificarPrimo(num) {
-        let div = 0;
-        for (let i = 0; i <= num; i++) {
-          if (num % i === 0) {
-            div++;
-          }
-        }
+    <header>
+      <!-- place navbar here -->
+    </header>
+    <main>
+      <div class="container mt-5">
+        <div class="row text-center">
+          <div class="col-12">
+            <div class="row">
+              <div class="col-2"></div>
+              <div class="col-8">
+                <table class="table table-striped table-light">
+                  <thead>
+                    <tr>
+                      <th>Aula</th>
+                      <th>Atividade</th>
+                      <th>Descrição</th>
+                      <th>Link</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Aula 01</td>
+                      <td>Atividade 01</td>
+                      <td>Tipo de dado</td>
+                      <td>
+                        <a
+                          class="btn btn-outline-primary btn-sm"
+                          href="./html/Aula-01-Atividade-1/atividade1.html"
+                          role="button"
+                          >Abir página</a
+                        >
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Aula 01</td>
+                      <td>Atividade 02</td>
+                      <td>Número primo</td>
+                      <td>
+                        <a
+                          class="btn btn-outline-primary btn-sm"
+                          href="./html/Aula-01-Atividade-2/atividade2.html"
+                          role="button"
+                          >Abir página</a
+                        >
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Aula 01</td>
+                      <td>Atividade 03</td>
+                      <td>Par ou Impar</td>
+                      <td>
+                        <a
+                          class="btn btn-outline-primary btn-sm"
+                          href="./html/Aula-01-Atividade-3/atividade3.html"
+                          role="button"
+                          >Abir página</a
+                        >
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Aula 01</td>
+                      <td>Atividade 04</td>
+                      <td>Fatorial</td>
+                      <td>
+                        <a
+                          class="btn btn-outline-primary btn-sm"
+                          href="./html/Aula-01-Atividade-4/atividade4.html"
+                          role="button"
+                          >Abir página</a
+                        >
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="col-2"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <!-- place footer here -->
+    </footer>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      crossorigin="anonymous"
+    ></script>
 
-        if (div === 2) {
-          return true;
-        }
-        return false;
-      }
-
-      function fatorial(num) {
-        if (num < 0) {
-          return -1;
-        } else if (num === 0) {
-          return 1;
-        } else {
-          return num * fatorial(num - 1);
-        }
-      }
-
-      let op = prompt("Escolha um número entre 1 a 4");
-
-      if (op === "1") {
-        let x = prompt("Atribua um valor a variavel: ");
-        if (confirm("Deseja ver o tipo da variavel?")) {
-          let y = +x;
-
-          if (x === "true") {
-            x = true;
-          }
-
-          if (x === "false") {
-            x = false;
-          }
-
-          if (isNaN(y)) {
-            document.write(`Essa variavel é do tipo ${typeof x}`);
-          } else {
-            document.write(`Essa variavel é do tipo ${typeof y}`);
-          }
-        } else {
-          document.wirte("Obrigado por vistar a pagina");
-        }
-      } else if (op === "2") {
-        let x = prompt("Digite um número: ");
-        let num = +x;
-
-        if (!isNaN(num)) {
-          if (verificarPrimo(parseInt(num))) {
-            alert("O número digitado é primo");
-          } else {
-            alert("O número digitado não é primo");
-          }
-        } else {
-          alert("Esse não é um valor válido!");
-        }
-      } else if (op === "3") {
-        let x = prompt("Digite um número: ");
-        let num = +x;
-
-        if (!isNaN(num)) {
-          if (num % 2 === 0) {
-            alert("Esse é um número par!");
-          } else {
-            alert("Esse é um número impar!");
-          }
-        }
-      } else if (op === "4") {
-        let x = prompt("Digite um número: ");
-        let num = +x;
-
-        if (!isNaN(num)) {
-          alert(`O fatorial deste número é: ${fatorial(num)}`);
-        }
-      }
-    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+      integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
