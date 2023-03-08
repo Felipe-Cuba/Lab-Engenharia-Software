@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>Carro</title>
+  </head>
+  <body>
+    <div class="container">
+      <form id="form-carro">
+        <h2>Informações sobre seu carro</h2>
+
+        <label for="marca">Marca: </label>
+        <input type="text" id="marca" name="marca" />
+
+        <label for="modelo">Modelo: </label>
+        <input type="text" id="modelo" name="modelo" />
+
+        <label for="ano">Ano: </label>
+        <input type="text" id="ano" name="ano" />
+
+        <label for="cor">Cor: </label>
+        <input type="text" id="cor" name="cor" />
+
+        <label for="km">Quilometragem: </label>
+        <input type="text" id="km" name="km" />
+
+        <label for="valor_fipe">Valor fipe: </label>
+        <input type="text" id="valor_fipe" name="valor_fipe" />
+
+        <input type="button" value="Calcular" onclick="calcular()" />
+
+        <div id="resultado"></div>
+      </form>
+    </div>
+    <script src="javascript/index.js"></script>
+  </body>
+</html>
