@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Formulário</title>
+	<script src="formulario.js"></script>
+</head>
+<body>
+	<form id="form">
+		<label for="nome">Nome:</label>
+		<input type="text" id="nome" name="nome" required><br>
+
+		<label for="email">Email:</label>
+		<input type="email" id="email" name="email" required><br>
+
+		<label for="data_nascimento">Data de nascimento:</label>
+		<input type="date" id="data_nascimento" name="data_nascimento" required><br>
+
+		<label for="telefone_celular">Telefone celular:</label>
+		<input type="tel" id="telefone_celular" name="telefone_celular" required><br>
+
+		<label for="telefone_fixo">Telefone fixo:</label>
+		<input type="tel" id="telefone_fixo" name="telefone_fixo" required><br>
+
+		<label for="tipo">Sou:</label>
+		<input type="radio" id="tipo_professor" name="tipo" value="professor">Professor
+		<input type="radio" id="tipo_aluno" name="tipo" value="aluno">Aluno<br>
+
+		<div id="campos_adicionais"></div>
+
+		<button type="submit">Enviar</button>
+	</form>
+</body>
+</html>
