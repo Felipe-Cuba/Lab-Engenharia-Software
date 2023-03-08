@@ -1,9 +1,9 @@
 const carro = {
-  marca: "",
-  modelo: "",
+  marca: '',
+  modelo: '',
   ano: 0,
-  quilometragem: "",
-  valor_fipe: "",
+  quilometragem: '',
+  valor_fipe: '',
 
   anosUtilizacao() {
     const dateNow = new Date();
@@ -31,12 +31,12 @@ const carro = {
 };
 
 function calcular() {
-  const marca = document.getElementById("marca").value;
-  const modelo = document.getElementById("modelo").value;
-  const ano = parseInt(document.getElementById("ano").value);
-  const cor = document.getElementById("cor").value;
-  const quilometragem = parseFloat(document.getElementById("km").value);
-  const valor_fipe = parseFloat(document.getElementById("valor_fipe").value);
+  const marca = document.getElementById('marca').value;
+  const modelo = document.getElementById('modelo').value;
+  const ano = parseInt(document.getElementById('ano').value);
+  const cor = document.getElementById('cor').value;
+  const quilometragem = parseFloat(document.getElementById('km').value);
+  const valor_fipe = parseFloat(document.getElementById('valor_fipe').value);
 
   carro.marca = marca;
   carro.modelo = modelo;
@@ -45,14 +45,14 @@ function calcular() {
   carro.quilometragem = quilometragem;
   carro.valor_fipe = valor_fipe;
 
-  const resultado = document.getElementById("resultado");
+  const resultado = document.getElementById('resultado');
 
   resultado.innerHTML = `<h2>Informações sobre o carro</h2>
   <p><strong>Marca:</strong> ${carro.marca}</p>
   <p><strong>Modelo:</strong> ${carro.modelo}</p>
   <p><strong>Ano:</strong> ${carro.ano}</p>
   <p><strong>Cor:</strong> ${carro.cor}</p>
-  <p><strong>Quilometragem:</strong> ${carro.km} km</p>
+  <p><strong>Quilometragem:</strong> ${carro.quilometragem} km</p>
   <p><strong>Valor Fipe:</strong> R$ ${carro.valor_fipe.toFixed(2)}</p>
   <p><strong>Anos de utilização:</strong> ${carro.anosUtilizacao()}</p>
   <p><strong>Valor de mercado:</strong> R$ ${carro.valorMercado()}</p>`;
