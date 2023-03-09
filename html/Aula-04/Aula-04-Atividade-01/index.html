@@ -1,34 +1,79 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="UTF-8">
-	<title>Formulário</title>
-	<script src="formulario.js"></script>
-</head>
-<body>
-	<form id="form">
-		<label for="nome">Nome:</label>
-		<input type="text" id="nome" name="nome" required><br>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Formulário</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <form id="form" class="form">
+      <label for="nome" class="label">Nome:</label>
+      <input type="text" id="nome" name="nome" required class="input" /><br />
 
-		<label for="email">Email:</label>
-		<input type="email" id="email" name="email" required><br>
+      <label for="email" class="label">Email:</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        required
+        class="input"
+      /><br />
 
-		<label for="data_nascimento">Data de nascimento:</label>
-		<input type="date" id="data_nascimento" name="data_nascimento" required><br>
+      <label for="data_nascimento" class="label">Data de nascimento:</label>
+      <input
+        type="date"
+        id="data_nascimento"
+        name="data_nascimento"
+        required
+        class="input"
+      />
 
-		<label for="telefone_celular">Telefone celular:</label>
-		<input type="tel" id="telefone_celular" name="telefone_celular" required><br>
+      <label for="telefone_celular" class="label">Telefone celular:</label>
+      <input
+        type="tel"
+        id="telefone_celular"
+        name="telefone_celular"
+        required
+        class="input"
+      /><br />
 
-		<label for="telefone_fixo">Telefone fixo:</label>
-		<input type="tel" id="telefone_fixo" name="telefone_fixo" required><br>
+      <label for="telefone_fixo" class="label">Telefone fixo:</label>
+      <input
+        type="tel"
+        id="telefone_fixo"
+        name="telefone_fixo"
+        required
+        class="input"
+      /><br />
 
-		<label for="tipo">Sou:</label>
-		<input type="radio" id="tipo_professor" name="tipo" value="professor">Professor
-		<input type="radio" id="tipo_aluno" name="tipo" value="aluno">Aluno<br>
+      <div class="radio-group">
+        <label class="label">Sou:</label>
+        <label for="tipo_professor" class="radio-label">
+          <input
+            type="radio"
+            id="tipo_professor"
+            name="tipo"
+            value="professor"
+            checked
+            class="radio-input"
+          />Professor
+        </label>
+        <label for="tipo_aluno" class="radio-label">
+          <input
+            type="radio"
+            id="tipo_aluno"
+            name="tipo"
+            value="aluno"
+            class="radio-input"
+          />Aluno
+        </label>
+      </div>
 
-		<div id="campos_adicionais"></div>
+      <div id="campos_adicionais" class="additional-fields"></div>
 
-		<button type="submit">Enviar</button>
-	</form>
-</body>
+      <button type="submit" class="button">Enviar</button>
+    </form>
+
+    <script src="javascript/index.js"></script>
+  </body>
 </html>

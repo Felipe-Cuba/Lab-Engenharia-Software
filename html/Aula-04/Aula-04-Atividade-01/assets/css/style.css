@@ -1,0 +1,81 @@
+/* Estilos para o formulário base */
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+
+.form {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  font-family: "Roboto", sans-serif;
+}
+
+.label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.radio-group {
+  margin-bottom: 10px;
+}
+
+.radio-label {
+  margin-right: 20px;
+}
+
+.radio-input {
+  margin-right: 5px;
+}
+
+.button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Estilos para as informações específicas do professor */
+
+.additional-fields label,
+.additional-fields input {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.additional-fields input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/* Estilos para as informações específicas do aluno */
+
+.additional-fields.aluno label,
+.additional-fields.aluno input {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.additional-fields.aluno input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
