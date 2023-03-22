@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://unpkg.com/react@18/umd/react.development.js"
+      crossorigin
+    ></script>
+    <script
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+      crossorigin
+    ></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+    <title>Letreiro</title>
+  </head>
+  <body>
+    <div id="letreiro"></div>
+    <script type="text/babel">
+      const Letreiro = () => {
+        const [texto, setTexto] = React.useState("");
+        const [contador, setContador] = React.useState(0);
+        const mensagem = "VENHA ESTUDAR NA FATEC";
+
+        React.useEffect(() => {
+          const intervalId = setInterval(() => {
+            if (contador < mensagem.length) {
+              setTexto((prevTexto) => prevTexto + mensagem[contador]);
+              setContador((prevContador) => prevContador + 1);
+            } else {
+              clearInterval(intervalId);
+              setTimeout(() => {
+                setTexto("");
+                setContador(0);
+              }, 2000);
+            }
+          }, 200);
+          return () => clearInterval(intervalId);
+        }, [contador, mensagem]);
+
+        return <h1 style={{ fontFamily: "Arial", color: "#237dfa" }}>{texto}</h1>;
+      };
+
+      ReactDOM.render(<Letreiro />, document.getElementById("letreiro"));
+    </script>
+  </body>
+</html>
